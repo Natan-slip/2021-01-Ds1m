@@ -12,7 +12,7 @@ public class App {
 		
 		contaDaAna.titular = "Ana Gomes";
 		contaDaAna.numero = "111-98";
-		contaDaAna.setTipo("Poupança");
+		contaDaAna.tipo = "Corrente";
 		contaDaAna.ativa = true;
 		contaDaAna.chequeEspecial = 200;
 		contaDaAna.depositar(100);
@@ -35,8 +35,5 @@ public class App {
 		
 		System.out.println("***** O Saldo da conta é " + saldoDaConta);
 		
-		
-		// *** Conta João
-		contaDoJoao.setTipo("Corrente");
 	}
 }
