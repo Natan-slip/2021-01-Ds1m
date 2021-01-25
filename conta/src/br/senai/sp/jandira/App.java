@@ -1,6 +1,7 @@
 package br.senai.sp.jandira;
 
 import br.senai.sp.jandira.model.Conta;
+import br.senai.sp.jandira.model.Cliente;
 
 public class App {
 
@@ -10,11 +11,11 @@ public class App {
 		Conta contaDaAna = new Conta();
 		Conta contaDoJoao = new Conta();
 		
-		contaDaAna.titular = "Ana Gomes";
-		contaDaAna.numero = "111-98";
+		//contaDaAna.setTitular("Ana Gomes");
+		contaDaAna.setNumero("111-98");
 		contaDaAna.setTipo("Poupança");
-		contaDaAna.ativa = true;
-		contaDaAna.chequeEspecial = 200;
+		contaDaAna.setAtiva(true);
+		contaDaAna.setChequeEspecial(200);
 		contaDaAna.depositar(100);
 		contaDaAna.mostrarSaldoDaConta();
 		contaDaAna.depositar(30);
@@ -31,9 +32,12 @@ public class App {
 		contaDaAna.mostrarSaldoDaConta();
 		contaDaAna.getSaldo();
 		
-		double saldoDaConta = contaDaAna.getSaldo();
+		//System.out.println("Nome: "+ contaDaAna.getTitular());
+		System.out.println("Tipo: "+ contaDaAna.getTipo());
+		System.out.println("Conta: "+ contaDaAna.getNumero());
+		System.out.println("Limite: "+ contaDaAna.getChequeEspecial());
 		
-		System.out.println("***** O Saldo da conta é " + saldoDaConta);
+		Cliente cliente = new Cliente ();
 		
 		
 		// *** Conta João
