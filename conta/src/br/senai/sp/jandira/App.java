@@ -42,5 +42,7 @@ public class App {
 		
 		// *** Conta João
 		contaDoJoao.setTipo("Corrente");
+		área é a base * altura
+		perímetro 2 (b + alt) faz distributiva e GG
 	}
 }
