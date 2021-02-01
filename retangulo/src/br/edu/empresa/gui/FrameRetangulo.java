@@ -1,12 +1,16 @@
 package br.edu.empresa.gui;
 
 import java.awt.Color;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
 import br.edu.empresa.model.Retangulo;
@@ -30,7 +34,7 @@ public class FrameRetangulo {
 		// *** Define a posição e tamanho do label (x, e, f, g);
 		
 		JTextField textAltura = new JTextField();
-		textAltura.setBounds(70, 10, 100, 30);
+		textAltura.setBounds(70, 10, 50, 30);
 		
 		
 		// *** Criar um label e Textfield da base
@@ -39,7 +43,7 @@ public class FrameRetangulo {
 		labelBase.setBounds(10, 45, 80, 30);
 		
 		JTextField textBase = new JTextField();
-		textBase.setBounds(70, 45, 100, 30);
+		textBase.setBounds(70, 45, 50, 30);
 		
 		
 		// *** Criando um botão para calcular
@@ -59,11 +63,11 @@ public class FrameRetangulo {
 		// *** Labels Resultados
 		JLabel labelArea = new JLabel();
 		labelArea.setText("Área: ");
-		labelArea.setBounds(200, 10, 70, 30);
+		labelArea.setBounds(150, 10, 120, 30);
 		
 		JLabel labelPerimetro = new JLabel();
 		labelPerimetro.setText("Perímetro: ");
-		labelPerimetro.setBounds(200, 45, 70, 30);
+		labelPerimetro.setBounds(150, 45, 120, 30);
 		
 		
 		// *** colocar o labelAltura dentro
@@ -78,22 +82,21 @@ public class FrameRetangulo {
 		telaRetangulo.getContentPane().add(labelPerimetro);
 		telaRetangulo.setVisible(true);
 		
-		// *** Cliques na tela 
+		// *** Ouvintes de ações/eventos
 		buttonCalcular.addActionListener(new ActionListener() {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				
-				Retangulo r = new Retangulo();
-				r.setAltura(Double.parseDouble(textAltura.getText()));
-				r.setBase(Double.parseDouble(textBase.getText()));
+				Retangulo r1 = new Retangulo();
+				r1.setAltura(Double.parseDouble(textAltura.getText()));
+				r1.setBase(Double.parseDouble(textBase.getText()));
 				
-				labelAltura.setText(String.valueOf(r.CalcularArea()));
-				labelBase.setText(String.valueOf(r.calcularPerimetro()));
+				labelArea.setText("Área: " + String.valueOf(r1.CalcularArea()));
+				labelPerimetro.setText("Perímetro: " + String.valueOf(r1.calcularPerimetro()));
 				
 			}
 		});
-		
 		
 	}
 	
