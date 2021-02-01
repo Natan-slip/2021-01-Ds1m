@@ -47,7 +47,23 @@ public class FrameRetangulo {
 		buttonCalcular.setText("Calcular");
 		Color laranja = new Color(255, 128, 0);
 		buttonCalcular.setBackground(laranja);
-		buttonCalcular.setBounds(10, 95, 180, 30);
+		buttonCalcular.setBounds(10, 95, 110, 30);
+		
+		// *** Construir o botão limpar
+		JButton buttonLimpar = new JButton();
+		buttonLimpar.setText("Limpar");
+		Color laranja1 = new Color(255, 128, 0);
+		buttonLimpar.setBackground(laranja1);
+		buttonLimpar.setBounds(10, 140, 110, 30);
+		
+		// *** Labels Resultados
+		JLabel labelArea = new JLabel();
+		labelArea.setText("Área: ");
+		labelArea.setBounds(200, 10, 70, 30);
+		
+		JLabel labelPerimetro = new JLabel();
+		labelPerimetro.setText("Perímetro: ");
+		labelPerimetro.setBounds(200, 45, 70, 30);
 		
 		
 		// *** colocar o labelAltura dentro
@@ -57,7 +73,9 @@ public class FrameRetangulo {
 		telaRetangulo.getContentPane().add(labelBase);
 		telaRetangulo.getContentPane().add(textBase);
 		telaRetangulo.getContentPane().add(buttonCalcular);
-		
+		telaRetangulo.getContentPane().add(buttonLimpar);
+		telaRetangulo.getContentPane().add(labelArea);
+		telaRetangulo.getContentPane().add(labelPerimetro);
 		telaRetangulo.setVisible(true);
 		
 		// *** Cliques na tela 
